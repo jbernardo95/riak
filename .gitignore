@@ -1,5 +1,6 @@
 deps/*
 rel/riak
+rel/riak.zip
 rel/vars/dev*_vars.config
 dev/
 perfdev/

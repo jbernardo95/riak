@@ -69,12 +69,19 @@ test: deps compile testclean
         fi
 
 ##
+## Zip release 
+##
+zip-rel:
+	cd ./rel/riak && zip -r ../riak.zip *
+
+##
 ## Release targets
 ##
-rel: locked-deps compile generate
+rel: locked-deps compile generate zip-rel
 
 relclean:
 	rm -rf rel/riak
+	rm -rf rel/riak.zip
 
 ##
 ## Developer targets
